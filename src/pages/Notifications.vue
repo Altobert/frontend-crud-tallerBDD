@@ -147,6 +147,7 @@
 </template>
 
 <script>
+/* eslint-disable no-new */
 export default {
   data() {
     return {

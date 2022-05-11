@@ -58,6 +58,7 @@
 </template>
 
 <script>
+/* eslint-disable no-new */
 import TopNavbar from "./TopNavbar.vue";
 import ContentFooter from "./ContentFooter.vue";
 import DashboardContent from "./Content.vue";
@@ -73,13 +74,19 @@ export default {
     FixedPlugin,
   },
   data() {
-    return {
-      valorTula : 1,
+    return {      
       sidebarBackground: "green",
       sidebarBackgroundImage: require("@/assets/img/sidebar-2.jpg"),
+      author: {
+        name: 'John Doe',
+        books: [
+          'Vue 2 - Advanced Guide',
+          'Vue 3 - Basic Guide',
+          'Vue 4 - The Mystery'
+        ]
+      },
     };
   },
-
   computed:{
     modalSaludo(){
       return "saludos cordiales";
@@ -88,9 +95,10 @@ export default {
       return Date.now();
     }
   },
-
   methods: {
-    
+    saludarDeMalas(){
+      alert('Saludar de malas');
+    }
   },
   
 };
