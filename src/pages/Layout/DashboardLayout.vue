@@ -4,8 +4,8 @@
 
     <side-bar
       :sidebar-item-color="sidebarBackground"
-      :sidebar-background-image="sidebarBackgroundImage"
-    >
+      :sidebar-background-image="sidebarBackgroundImage">
+
       <mobile-menu slot="content"></mobile-menu>
       <sidebar-link to="/dashboard">
         <md-icon>dashboard</md-icon>
@@ -74,9 +74,24 @@ export default {
   },
   data() {
     return {
+      valorTula : 1,
       sidebarBackground: "green",
       sidebarBackgroundImage: require("@/assets/img/sidebar-2.jpg"),
     };
   },
+
+  computed:{
+    modalSaludo(){
+      return "saludos cordiales";
+    },
+    now() {
+      return Date.now();
+    }
+  },
+
+  methods: {
+    
+  },
+  
 };
 </script>
